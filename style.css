@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --clr-dark: #222;
-    --clr-light-accent: #CAD8E5;
+    --clr-dark: #22234D;
+    --clr-light-accent: #bacfe2;
     --clr-light: #eee;
-    --clr-light-plus: #e9e9e9;
-    --clr-mid: #707070;
+    --clr-bg-logo: #e7ecf0;
+    --clr-mid: #455679;
 }
 
 *{
@@ -15,12 +15,11 @@
 }
 
 body{
-    position: relative;
+    /* position: relative; */
     background-color: var(--clr-light);
-    color: var(--clr-dark);
+    color: var(--clr-mid);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    padding: 1rem;
     padding-top: 100px;
 }
 
@@ -32,7 +31,7 @@ h1{
     font-size: 2rem;
 }
 
-nav{
+header{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -41,14 +40,14 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ddd;
-    color: var(--clr-mid);
+    background-color: var(--clr-mid);
+    color: var(--clr-light);
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.2);
 }
 
 .class-logo{
     font-weight: 800;
-    color: var(--clr-mid);
+    color: var(--clr-light);
     letter-spacing: -2px;
     font-size: 1.5rem;
 }
@@ -57,7 +56,7 @@ nav{
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    border: 2px solid var(--clr-mid);
+    border: 2px solid var(--clr-light);
     display: flex;
     gap: 5px;
     flex-direction: column;
@@ -68,7 +67,7 @@ nav{
     span{
         width: 75%;
         height: 4px;
-        background-color: var(--clr-mid);
+        background-color: var(--clr-light);
         border-radius: 2px;
     }
 }
@@ -76,79 +75,32 @@ nav{
 #ham-menu:hover{
     gap: 7px;
 }
+main{
+    padding: 2rem;
+    position: relative;
+}
 
 .background-logo{
     position: absolute;
     z-index: -100;
-    width: 100%;
-    height: 100vh;
-    left: 0;
+    width: 90%;
+    height: 98vh;
+    left: 10%;
     top: 0;
-    font-size: 50rem;
+    font-size:40em;
     font-weight: 800;
     letter-spacing: -8rem;
     line-height: 35rem;
-    color: var(--clr-light-plus);
+    color: var(--clr-bg-logo);
     display: flex;
     align-items: center;
-    overflow: hidden;
 }
-
-section{
+footer{
+    position: fixed;
+    bottom: 0;
+    min-height: 50px;
+    width: 100%;
+    background-color: var(--clr-mid);
+    color: var(--clr-light);
     padding: 1rem;
-    margin-bottom: 1rem;
-}
-.two-column{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
-
-    div{
-        max-width: 50%;
-    }
-}
-
-.example{
-    width: 200px;
-    height: 200px;
-    border: 2px solid var(--clr-light-accent);
-    border-radius: 1rem;
-    position: relative;
-}
-
-.ball{
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: var(--clr-light-accent);
-}
-
-
-/*========== NICOLET STYLE OVERRIDE ============*/
-.nicolet{
-    --clr-dark: #22234D;
-    --clr-light-accent: #CAD8E5;
-    --clr-light: #eeeedd;
-    background-color: var(--clr-light-accent);
-    color: var(--clr-dark);
-    padding: 1rem;
-    border-radius: 1rem;
-
-    h1, h2, h3{
-        font-family: "EB Garamond", serif;
-        font-style: normal;
-    }
-    h1{
-        font-size: 4rem;
-    }
-
-    h4{
-        font-family: Arial, Helvetica, sans-serif;
-        font-style: italic;
-        font-weight: 100;
-    }
 }
