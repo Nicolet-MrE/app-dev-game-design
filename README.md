@@ -1,5 +1,5 @@
 # App Dev and Game Design
-<a href="https://nicolet-mre.github.io/app-dev-game-design/" target="_blank">View Forward Facing Repo</a><br/>
+[View Forward Facing Repo](https://nicolet-mre.github.io/app-dev-game-design/)
 
 In this project-based course, students will develop web applications and games with responsive design for use on multiple devices.  Students are introduced to the fundamentals of app/game design and development in a VSCode development environment utilizing object oriented programming principles.  Gaining a command of HTML, CSS, and Javascript, students will create mobile-first, interactive designs for fully immersive user experiences.
 
