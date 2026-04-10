@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Main Page</title>
+    <title>Sample Portfolio</title>
     <link rel="shortcut icon" href="img/webdev-icon.svg" type="svg/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Basic Webpage Template</h1>
-    <a href="about.html"> About Page</a>
+<body style="background-color: #333; color: #ddd;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 2rem;">
+        <h2>WebDev</h2>
+        <h1>Sample Portfolio</h1>
+        <ul>
+            <li><a href="about.html" style="color:#ddd"> About</a></li>
+        </ul>
+    </header>
+    <main style="display: flex; justify-content: center;">
+        <section style="width: 50%; border: 1px solid #ddd; border-radius: 2rem; padding: 2rem;">
+            <img src="https://placehold.co/400" alt="placehoder image" width="200">
+            <h3>Item Header</h3>
+            <P>A brief description of the project.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae neque quia, voluptates in tenetur voluptas velit delectus at laboriosam impedit optio quo itaque.</P>
+        </section>    
+    </main>
+    <footer>
+        <p>&copy; 2026 by Author</p>
+    </footer>
+
+    
     <script type="module" src="script.js"></script>
 </body>
 </html>
