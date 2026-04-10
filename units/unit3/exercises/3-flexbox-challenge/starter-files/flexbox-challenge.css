@@ -1,0 +1,90 @@
+:root{
+    --color-dark: #333;
+    --color-mid: #999;
+    --color-light: #ddd;
+    --color-accent: aqua;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-mid);
+    color: var(--color-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    background-color: var(--color-light);
+    padding: 1rem;
+}
+.logo{
+    font-size: 8rem;
+    color: var(--color-accent);
+    text-shadow: -2px 2px var(--color-dark);
+}
+#nav-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--color-dark);
+    border-radius: 1rem;
+    box-shadow: 2px 2px var(--color-dark);
+    font-size: 3.5rem;
+}
+h1{
+    font-size: 4rem;
+}
+main{
+    width: 100%;
+    min-height: 400px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    padding: 1rem;
+}
+section{
+    padding: 1rem;
+}
+article{
+    padding: 1rem;
+    border: 1px solid var(--color-mid);
+    border-radius: 5px;
+    max-width: 300px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--color-mid);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+    font-weight: 700;
+}
+footer{
+    padding: 1rem;
+}
+
+/* ========= ADD YOUR SELECTORS & PROPERTIES HERE =================*/
+
+header{
+
+}
+#main-links{
+
+}
+#article-section{
+
+}
+footer{
+
+}
