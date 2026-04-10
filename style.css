@@ -150,6 +150,7 @@ main{
         justify-content: flex-start;
         align-items: flex-start;
         gap: 2rem;
+        width: 80%;
         background-color: var(--clr-mid);
         border: 2px solid var(--clr-light-accent);
         border-radius: 1rem;
@@ -159,7 +160,7 @@ main{
         ul{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             gap: 1rem;
             margin: 2rem;
