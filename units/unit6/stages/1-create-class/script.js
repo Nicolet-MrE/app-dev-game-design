@@ -6,7 +6,5 @@ window.onload = () => {
     const ball = new Ball('red', '30');
 
     container.appendChild(ball.element);
-
-
 }
 

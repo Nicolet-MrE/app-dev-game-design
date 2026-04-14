@@ -22,9 +22,9 @@ function init(){
     });
 
     emptyButton.addEventListener('click', ()=>{
-        let toRemove = document.getElementsByClassName('ball');
-        while(toRemove.length > 0){
-                toRemove.item(0).remove();
+        let ballsToRemove = document.getElementsByClassName('ball');
+        while(ballsToRemove.length > 0){
+            ballsToRemove.item(0).remove();
         }
         balls.length = 0;
     });
