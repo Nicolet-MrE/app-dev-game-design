@@ -78,6 +78,5 @@ button:hover{
         z-index: 1;
         border: 2px solid var(--clr-mid);
         box-shadow: 0 0 10px var(--clr-light);
-        border-radius: 50%
     }
 }

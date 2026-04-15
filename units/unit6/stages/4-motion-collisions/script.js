@@ -1,33 +1,21 @@
-'use strict';
-import {Ball} from './classes/Ball.js';
 console.log('js connected!');
+import {Ball } from "./classes/Ball.js";
 
-window.onload = init;
-
-function init(){
-    const bounceContainer = document.getElementById('bounce-container');
+window.onload = () => {
+     //most elements are new or refactored.
+    const container = document.getElementById('bounce-container');
     const dropButton = document.getElementById('drop-button');
-    const emptyButton = document.getElementById('empty-button');
 
     const balls = [];
 
-
     dropButton.addEventListener('click', ()=>{
-        let ball = new Ball();
-        bounceContainer.appendChild(ball.element);
-        ball.elementRef = document.getElementById(ball.id);
+        let ball = new Ball(); // adapted
+        container.appendChild(ball.element);
+        ball.elementRef = document.getElementById(ball.id); //New
         balls.push(ball);
     });
 
-    emptyButton.addEventListener('click', ()=>{
-        let ballsToRemove = document.getElementsByClassName('ball');
-        while(ballsToRemove.length > 0){
-            ballsToRemove.item(0).remove();
-        }
-        balls.length = 0;
-    });
-
-    function gameLoop(){
+      function gameLoop(){
         let yFactor = 5;
         let xFactor = 2;
         
@@ -44,9 +32,5 @@ function init(){
 
     //Start Loop
     requestAnimationFrame(gameLoop);
+    
 }
-
-
-
-
-
