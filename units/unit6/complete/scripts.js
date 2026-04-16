@@ -41,7 +41,6 @@ function init(){
         });
         requestAnimationFrame(gameLoop);
     }
-
     //Start Loop
     requestAnimationFrame(gameLoop);
 }
