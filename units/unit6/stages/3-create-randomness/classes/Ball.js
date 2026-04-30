@@ -1,7 +1,7 @@
 'use strict';
 
 export class Ball {
-    constructor(color, size, xPos, ){
+    constructor(){
         this.id = String(Math.floor(Math.random() * 1000)); // New
         this.x = Math.floor(Math.random() * (450 - 50) + 50); // New
         this.y = 15; //New

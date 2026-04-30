@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Adventure</title>
+    <link rel="shortcut icon" href="icons/dwarf-face.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="icons/dwarf-face.svg" alt="text adventure logo - dwarf face icon">
+        <h1>Text Adventure</h1>
+        <div id="menu-container">
+            <div id="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="menu-box">
+                <ul>
+                    <li id="save">Save</li>
+                    <li id="restart">Restart</li>
+                    <li id="quit">Quit</li>
+                </ul>
+            </div>
+        </div>    
+    </header>
+    <main>
+        <section id="gameboard-section">
+            <section id="npc-section">
+                <div id="npc" class="character-section">
+                    <div id="npc-character" class="character-icon-container">
+                        <img src="icons/troll.svg" width="150" alt="Your Opponent">
+                            <h2>Innkeeper</h2>
+                        <h3>Trader | Level 1</h3>
+                    </div>
+                    <div id="npc-text-container" class="character-text-area">
+                        <p>Hello, adventurer!</p>
+                        <p></p>
+                        <p>Of course!  That'll be 15 gold.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="player-section" >
+                <div id="player" class="character-section">
+                     <div id="player-text-container" class="character-text-area">
+                        <p>I'd like a meal please.</p>
+                    </div>
+                    <div id="player-character" class="character-icon-container">
+                        <img src="icons/dwarf-face.svg"  width="150" alt="Your Opponent">
+                        <h2>Adventurer</h2>
+                        <h3>Beginner | Level 1</h3>
+                    </div>                   
+                </div>
+            </section>
+        </section>
+        
+        <section id="player-button-section">
+            <button id="attack-button">
+                <img src="icons/battle-axe.svg" alt="attack button">
+            </button>
+            <button id="charm-button">
+                <img src="icons/charm.svg" alt="charm button">
+            </button>
+            <button id="retreat-button">
+                <img src="icons/run.svg" alt="retreat button">
+            </button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 by Apps4Everyone.tech</p>
+    </footer>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
