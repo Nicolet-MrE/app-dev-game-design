@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --clr-dark: #333;
+    --clr-light: #ddd;
+    --clr-board: #666;
+    --clr-block: red;
+    --clr-player: cyan;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+h1{
+    font-size: 4rem;
+}
+#gameboard{
+    position: relative;
+    background-color: var(--clr-board);
+    border: 1px solid var(--clr-light);
+    box-shadow: 0 0 30px var(--clr-light);
+}
+
+.block{
+    position:absolute;
+    background-color: var(--clr-block);
+    border: 2px solid black;
+}
+
+#player{
+    position: absolute;
+    background-color: var(--clr-player);
+    border: 2px solid white;
+}
