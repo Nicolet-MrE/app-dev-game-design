@@ -28,13 +28,27 @@ body{
 h1{
     font-size: 4rem;
 }
+#game-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
 #gameboard{
     position: relative;
     background-color: var(--clr-board);
     border: 1px solid var(--clr-light);
     box-shadow: 0 0 30px var(--clr-light);
 }
+#buttons{
+    padding: 1rem;
 
+    button{
+        padding: 1rem;
+        background-color: greenyellow;
+        border-radius: 1rem;
+    }
+}
 .block{
     position:absolute;
     background-color: var(--clr-block);

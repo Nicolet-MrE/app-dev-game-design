@@ -7,6 +7,7 @@ export class Player{
         this.id ="player";
         this.el = this.init();
         this.elRef = undefined;
+        this.collision = false;
     }
 
    init(){
