@@ -6,6 +6,8 @@
     --clr-board: #666;
     --clr-block: red;
     --clr-player: cyan;
+    --clr-go-button: yellowgreen;
+    --clr-no-button: #777;
 }
 
 *{
@@ -28,11 +30,26 @@ body{
 h1{
     font-size: 4rem;
 }
-#game-container{
+#ui-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
+}
+#score-container{
+    padding: 1rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+#game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 #gameboard{
     position: relative;
@@ -42,10 +59,19 @@ h1{
 }
 #buttons{
     padding: 1rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
 
     button{
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
         padding: 1rem;
-        background-color: greenyellow;
+        color: var(--clr-dark);
+        background-color: var(--clr-no-button);
         border-radius: 1rem;
     }
 }

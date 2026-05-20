@@ -10,10 +10,13 @@ export class Game {
         this.boardHeight = 800;
         this.level = 1;
         this.spawnClock = 0;
+        this.score = 0;
         this.speed = 3;
         this.player = undefined;
         this.blocks = [];
         this.keys = new Keytracker();
+        this.messageContainer = document.getElementById('message');
+        this.scoreContainer = document.getElementById('score');
 
         this.gameboard.style.width = `${this.boardWidth}px`;
         this.gameboard.style.height = `${this.boardHeight}px`;
@@ -24,23 +27,24 @@ export class Game {
         this.player.elRef = document.getElementById('player');
     }
     checkPlayerMovement(){
-        if(this.keys.states.w){
+        if(this.play){
+            if(this.keys.states.w){
             this.player.y = this.player.y - this.speed;
             this.player.elRef.style.top = `${this.player.y}px`;
+            }
+            if(this.keys.states.s){
+                this.player.y = this.player.y + this.speed;
+                this.player.elRef.style.top = `${this.player.y}px`;
+            }
+            if(this.keys.states.a){
+                this.player.x = this.player.x - this.speed;
+                this.player.elRef.style.left = `${this.player.x}px`;
+            }
+            if(this.keys.states.d){ 
+                this.player.x = this.player.x + this.speed;
+                this.player.elRef.style.left = `${this.player.x}px`;
+            }
         }
-        if(this.keys.states.s){
-            this.player.y = this.player.y + this.speed;
-            this.player.elRef.style.top = `${this.player.y}px`;
-        }
-        if(this.keys.states.a){
-            this.player.x = this.player.x - this.speed;
-            this.player.elRef.style.left = `${this.player.x}px`;
-        }
-        if(this.keys.states.d){ 
-            this.player.x = this.player.x + this.speed;
-            this.player.elRef.style.left = `${this.player.x}px`;
-        }
-
     }
     makeBlock(){
         let block = new Block();
@@ -63,11 +67,20 @@ export class Game {
                 return false;
             }
     }
+    checkScore(){
+        if(this.spawnClock % 60 === 0 && this.play ){ 
+            this.score++;
+           // console.log(this.score);
+            this.scoreContainer.innerHTML = `${this.score}`;
+        }
+    }
     endGame(){
         this.play = false;
-        let gameOver = document.createElement('h1');
-        gameOver.innerHTML = 'Game Over';
-        this.gameboard.appendChild(gameOver);
+        this.messageContainer.innerHTML = 'Game Over';
+    }
+    pauseGame(){
+        this.play = false;
+        this.messageContainer.innerHTML = 'Game Paused';
     }
     
 }

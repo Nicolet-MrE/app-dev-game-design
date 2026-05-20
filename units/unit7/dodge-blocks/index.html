@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dodge Blocks</h1>
-    <section id="game-container">
-        <div id="gameboard"></div>
-        <div id="buttons">
-            <button id="start">On/Off</button>
-        </div>
-    </section>
+
+    <div id="ui-container">
+        <section id="score-container">
+            <h3>Score</h3>
+            <h2 id="score">0</h2>
+        </section>
+        <section id="game-container">
+            <h1>Dodge Blocks</h1>
+            <div id="gameboard"></div>
+            <h2 id="message"> Press Start </h2>
+        </section>
+        <section id="buttons">
+                <button id="start">Start</button>
+                <button id="restart">Restart</button>
+        </section>
+    </div>
     
-    <p>Dodge the Blocks!</p>
     <script type="module" src="script.js"></script>
 </body>
 </html>
