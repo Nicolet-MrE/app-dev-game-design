@@ -8,6 +8,7 @@ export class Game {
         this.play = false;
         this.boardWidth = 400;
         this.boardHeight = 800;
+        this.levelContainer = document.getElementById('level');
         this.level = 1;
         this.spawnClock = 0;
         this.score = 0;
@@ -69,14 +70,22 @@ export class Game {
     }
     checkScore(){
         if(this.spawnClock % 60 === 0 && this.play ){ 
-            this.score++;
+            this.score = this.score + this.level;
            // console.log(this.score);
             this.scoreContainer.innerHTML = `${this.score}`;
+        }
+    }
+    checkLevel(){
+        if(this.spawnClock % 600 === 0 && this.play ){ 
+            this.level++;
+            this.levelContainer.innerHTML = `${this.level}`;
+            //console.log(this.level);
         }
     }
     endGame(){
         this.play = false;
         this.messageContainer.innerHTML = 'Game Over';
+        this.gameboard.style.backgroundColor = 'white';
     }
     pauseGame(){
         this.play = false;

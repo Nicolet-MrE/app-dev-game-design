@@ -3,11 +3,11 @@
 :root{
     --clr-dark: #333;
     --clr-light: #ddd;
-    --clr-board: #666;
-    --clr-block: red;
-    --clr-player: cyan;
+    --clr-board: #222;
+    --clr-block: #ddd;
+    --clr-player: purple;
     --clr-go-button: yellowgreen;
-    --clr-no-button: #777;
+    --clr-no-button: #333;
 }
 
 *{
@@ -53,10 +53,20 @@ h1{
 }
 #gameboard{
     position: relative;
-    background-color: var(--clr-board);
+    /* background-color: var(--clr-board); */
     border: 1px solid var(--clr-light);
     box-shadow: 0 0 30px var(--clr-light);
 }
+.board-play{
+    background-color: var(--clr-board);
+}
+.button-on{
+    background-color: var(--clr-go-button);
+}
+.paused{
+    background-color: Var(--clr-no-button);
+}
+
 #buttons{
     padding: 1rem;
     padding-bottom: 4rem;
@@ -70,7 +80,7 @@ h1{
         font-size: 1.5rem;
         font-weight: 700;
         padding: 1rem;
-        color: var(--clr-dark);
+        color: var(--clr-light);
         background-color: var(--clr-no-button);
         border-radius: 1rem;
     }
@@ -78,11 +88,12 @@ h1{
 .block{
     position:absolute;
     background-color: var(--clr-block);
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 #player{
     position: absolute;
     background-color: var(--clr-player);
     border: 2px solid white;
+    border-radius: 5px;
 }

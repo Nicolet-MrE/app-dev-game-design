@@ -9,6 +9,8 @@ game.spawnPlayer();
 
 const toggleOn = document.getElementById('start');
 toggleOn.addEventListener('click',()=>{
+    game.gameboard.classList.toggle('paused');
+    //console.log(game.gameboard);
     if(game.play == false) {
         game.play = true;
         toggleOn.setAttribute('style', 'background-color: var(--clr-go-button');
@@ -40,6 +42,7 @@ const gameLoop = ()=>{
     game.checkPlayerMovement();
     game.checkPlayerBounds();
     game.checkScore();
+    game.checkLevel();
     
         if(game.play){
             game.blocks.forEach((block, index)=>{

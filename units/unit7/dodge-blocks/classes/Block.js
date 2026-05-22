@@ -19,6 +19,11 @@ export class Block{
         block.style.left = `${this.x}px`;
         block.style.top = `${this.y}px`;
         block.classList.add('block');
+        let borderRadius;
+        if(this.width > this.height ) borderRadius = this.height / 4;
+        else borderRadius = this.width / 4;
+        block.style.borderRadius = `${borderRadius}px`;
         return block;
     }
+
 }
